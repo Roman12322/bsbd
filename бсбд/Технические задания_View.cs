@@ -12,23 +12,16 @@ namespace бсбд
 {
     public partial class Технические_задания_View : Form
     {
-        private static Технические_задания_View Технические_задания_View_form;
-        public static Технические_задания_View Технические_задания_View_f
-        {
-            get
-            {
-                if (Технические_задания_View_form == null || Технические_задания_View_form.IsDisposed) Технические_задания_View_form = new Технические_задания_View();
-                return Технические_задания_View_form;
-            }
-        }
+        private readonly checkuser _user;
         public void ShowForm()
         {
             Show();
             Activate();
         }
-        public Технические_задания_View()
+        public Технические_задания_View(checkuser user)
         {
             InitializeComponent();
+            _user = user;
         }
 
         private void technical_requirementsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -42,7 +35,7 @@ namespace бсбд
         private void Технические_задания_View_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "programmnoeObespechenieDataset.Technical_requirements". При необходимости она может быть перемещена или удалена.
-            this.technical_requirementsTableAdapter.Fill(this.programmnoeObespechenieDataset.Technical_requirements);
+            this.technical_requirementsTableAdapter.FillByCUSTOMER_ID(this.programmnoeObespechenieDataset.Technical_requirements, _user.id_user);
 
         }
     }

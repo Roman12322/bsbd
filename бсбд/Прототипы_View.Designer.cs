@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Прототипы_View));
-            this.programmnoeObespechenieDataset = new бсбд.ProgrammnoeObespechenieDataset();
+            this.programmnoeObespechenieDataset = new бсбд.programmnoeObespechenieDataset();
             this.prototypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.prototypeTableAdapter = new бсбд.ProgrammnoeObespechenieDatasetTableAdapters.PrototypeTableAdapter();
-            this.tableAdapterManager = new бсбд.ProgrammnoeObespechenieDatasetTableAdapters.TableAdapterManager();
+            this.prototypeTableAdapter = new бсбд.programmnoeObespechenieDatasetTableAdapters.PrototypeTableAdapter();
+            this.tableAdapterManager = new бсбд.programmnoeObespechenieDatasetTableAdapters.TableAdapterManager();
             this.prototypeBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -83,7 +83,7 @@
             this.tableAdapterManager.PrototypeTableAdapter = this.prototypeTableAdapter;
             this.tableAdapterManager.TeamTableAdapter = null;
             this.tableAdapterManager.Technical_requirementsTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = бсбд.ProgrammnoeObespechenieDatasetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = бсбд.programmnoeObespechenieDatasetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // prototypeBindingNavigator
             // 
@@ -288,10 +288,10 @@
 
         #endregion
 
-        private ProgrammnoeObespechenieDataset programmnoeObespechenieDataset;
+        private programmnoeObespechenieDataset programmnoeObespechenieDataset;
         private System.Windows.Forms.BindingSource prototypeBindingSource;
-        private ProgrammnoeObespechenieDatasetTableAdapters.PrototypeTableAdapter prototypeTableAdapter;
-        private ProgrammnoeObespechenieDatasetTableAdapters.TableAdapterManager tableAdapterManager;
+        private programmnoeObespechenieDatasetTableAdapters.PrototypeTableAdapter prototypeTableAdapter;
+        private programmnoeObespechenieDatasetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator prototypeBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;

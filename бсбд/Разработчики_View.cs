@@ -12,23 +12,16 @@ namespace бсбд
 {
     public partial class Разработчики_View : Form
     {
-        private static Разработчики_View Разработчики_View_form;
-        public static Разработчики_View Разработчики_View_f
-        {
-            get
-            {
-                if (Разработчики_View_form == null || Разработчики_View_form.IsDisposed) Разработчики_View_form = new Разработчики_View();
-                return Разработчики_View_form;
-            }
-        }
+        private readonly checkuser _user;
         public void ShowForm()
         {
             Show();
             Activate();
         }
-        public Разработчики_View()
+        public Разработчики_View(checkuser user)
         {
             InitializeComponent();
+            _user = user;
         }
 
         private void developerBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -42,7 +35,7 @@ namespace бсбд
         private void Разработчики_View_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "programmnoeObespechenieDataset.Developer". При необходимости она может быть перемещена или удалена.
-            this.developerTableAdapter.Fill(this.programmnoeObespechenieDataset.Developer);
+            this.developerTableAdapter.FillByDEV_ID(this.programmnoeObespechenieDataset.Developer, _user.id_user);
 
         }
         string GetSelectedFieldName()

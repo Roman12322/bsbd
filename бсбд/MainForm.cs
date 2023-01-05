@@ -17,17 +17,46 @@ namespace бсбд
 {
     public partial class MainForm : Form
     {
+        private readonly checkuser _user;
         private SqlConnection sql_connection = null;
 
-        public MainForm()
+        public MainForm(checkuser user)
         {
             InitializeComponent();
+            _user = user;
         }
 
+        private void check_user_status()
+        {
+            switch (_user.user_status)
+            {
+                case "developer":
+                    справочникиToolStripMenuItem.Visible = true;
+                    командыToolStripMenuItem.Visible = true;
+                    компанииToolStripMenuItem.Visible = true;
+                    разработчикиToolStripMenuItem.Visible = true;
+
+                    справочникиViewsToolStripMenuItem.Visible = true;
+                    командыViewToolStripMenuItem.Visible = true;
+                    разработчикиViewToolStripMenuItem.Visible = true;
+                    break;
+
+                case "customer":
+                    справочникиToolStripMenuItem.Visible = true;
+                    компанииToolStripMenuItem.Visible = true;
+
+                    справочникиViewsToolStripMenuItem.Visible = true;
+                    техническиезаданияViewToolStripMenuItem.Visible = true;
+                    прототипыViewToolStripMenuItem.Visible = true;
+                    break;
+            }
+
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             sql_connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database_1"].ConnectionString);
             sql_connection.Open();
+            check_user_status();
         }
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
@@ -76,7 +105,8 @@ namespace бсбд
 
         private void прототипыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Prototypes.Prototypes_f.Show();
+            Prototypes prototypes = new Prototypes(_user);
+            prototypes.ShowForm();
         }
 
         private void техническиеЗаданияToolStripMenuItem_Click(object sender, EventArgs e)
@@ -96,7 +126,8 @@ namespace бсбд
 
         private void разработчикиViewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Разработчики_View.Разработчики_View_f.ShowForm();
+            Разработчики_View разработчики = new Разработчики_View(_user);
+            разработчики.ShowForm();
         }
 
         private void покупателиViewToolStripMenuItem_Click(object sender, EventArgs e)
@@ -106,17 +137,20 @@ namespace бсбд
 
         private void прототипыViewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Прототипы_View.Прототипы_View_f.ShowForm();
+            Прототипы_View прототипы = new Прототипы_View(_user);
+            прототипы.ShowForm();
         }
 
         private void техническиезаданияViewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Технические_задания_View.Технические_задания_View_f.ShowForm();
+            Технические_задания_View технические_Задания = new Технические_задания_View(_user);
+            технические_Задания.ShowForm();
         }
 
         private void командыViewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            команды_view.команды_view_f.ShowForm();
+            команды_view команды = new команды_view(_user);
+            команды.ShowForm();
         }
 
         private void запросыToolStripMenuItem_Click(object sender, EventArgs e)

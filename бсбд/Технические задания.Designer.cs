@@ -38,10 +38,10 @@
             System.Windows.Forms.Label finish_dateLabel;
             System.Windows.Forms.Label customer_idLabel;
             System.Windows.Forms.Label company_idLabel;
-            this.programmnoeObespechenieDataset = new бсбд.ProgrammnoeObespechenieDataset();
+            this.programmnoeObespechenieDataset = new бсбд.programmnoeObespechenieDataset();
             this.technical_requirementsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.technical_requirementsTableAdapter = new бсбд.ProgrammnoeObespechenieDatasetTableAdapters.Technical_requirementsTableAdapter();
-            this.tableAdapterManager = new бсбд.ProgrammnoeObespechenieDatasetTableAdapters.TableAdapterManager();
+            this.technical_requirementsTableAdapter = new бсбд.programmnoeObespechenieDatasetTableAdapters.Technical_requirementsTableAdapter();
+            this.tableAdapterManager = new бсбд.programmnoeObespechenieDatasetTableAdapters.TableAdapterManager();
             this.technical_requirementsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -100,7 +100,7 @@
             this.tableAdapterManager.PrototypeTableAdapter = null;
             this.tableAdapterManager.TeamTableAdapter = null;
             this.tableAdapterManager.Technical_requirementsTableAdapter = this.technical_requirementsTableAdapter;
-            this.tableAdapterManager.UpdateOrder = бсбд.ProgrammnoeObespechenieDatasetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = бсбд.programmnoeObespechenieDatasetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // technical_requirementsBindingNavigator
             // 
@@ -399,10 +399,10 @@
 
         #endregion
 
-        private ProgrammnoeObespechenieDataset programmnoeObespechenieDataset;
+        private programmnoeObespechenieDataset programmnoeObespechenieDataset;
         private System.Windows.Forms.BindingSource technical_requirementsBindingSource;
-        private ProgrammnoeObespechenieDatasetTableAdapters.Technical_requirementsTableAdapter technical_requirementsTableAdapter;
-        private ProgrammnoeObespechenieDatasetTableAdapters.TableAdapterManager tableAdapterManager;
+        private programmnoeObespechenieDatasetTableAdapters.Technical_requirementsTableAdapter technical_requirementsTableAdapter;
+        private programmnoeObespechenieDatasetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator technical_requirementsBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;

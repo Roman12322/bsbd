@@ -35,12 +35,12 @@
             System.Windows.Forms.Label technical_requirements_idLabel;
             System.Windows.Forms.Label company_idLabel;
             System.Windows.Forms.Label costLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Prototypes));
             System.Windows.Forms.Label prototype_infoLabel;
-            this.programmnoeObespechenieDataset = new бсбд.ProgrammnoeObespechenieDataset();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Prototypes));
+            this.programmnoeObespechenieDataset = new бсбд.programmnoeObespechenieDataset();
             this.prototypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.prototypeTableAdapter = new бсбд.ProgrammnoeObespechenieDatasetTableAdapters.PrototypeTableAdapter();
-            this.tableAdapterManager = new бсбд.ProgrammnoeObespechenieDatasetTableAdapters.TableAdapterManager();
+            this.prototypeTableAdapter = new бсбд.programmnoeObespechenieDatasetTableAdapters.PrototypeTableAdapter();
+            this.tableAdapterManager = new бсбд.programmnoeObespechenieDatasetTableAdapters.TableAdapterManager();
             this.prototypeBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -61,16 +61,13 @@
             this.company_idTextBox = new System.Windows.Forms.TextBox();
             this.costLabel1 = new System.Windows.Forms.Label();
             this.technical_requirementsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.technical_requirementsTableAdapter = new бсбд.ProgrammnoeObespechenieDatasetTableAdapters.Technical_requirementsTableAdapter();
+            this.technical_requirementsTableAdapter = new бсбд.programmnoeObespechenieDatasetTableAdapters.Technical_requirementsTableAdapter();
             this.prototype_infoLabel1 = new System.Windows.Forms.Label();
             this.prototypeDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             idLabel = new System.Windows.Forms.Label();
             versionLabel = new System.Windows.Forms.Label();
             statusLabel = new System.Windows.Forms.Label();
@@ -89,45 +86,50 @@
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(10, 42);
+            idLabel.Location = new System.Drawing.Point(13, 52);
+            idLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(19, 13);
+            idLabel.Size = new System.Drawing.Size(21, 16);
             idLabel.TabIndex = 1;
             idLabel.Text = "Id:";
             // 
             // versionLabel
             // 
             versionLabel.AutoSize = true;
-            versionLabel.Location = new System.Drawing.Point(10, 68);
+            versionLabel.Location = new System.Drawing.Point(13, 84);
+            versionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             versionLabel.Name = "versionLabel";
-            versionLabel.Size = new System.Drawing.Size(45, 13);
+            versionLabel.Size = new System.Drawing.Size(56, 16);
             versionLabel.TabIndex = 3;
             versionLabel.Text = "Version:";
             // 
             // statusLabel
             // 
             statusLabel.AutoSize = true;
-            statusLabel.Location = new System.Drawing.Point(10, 94);
+            statusLabel.Location = new System.Drawing.Point(13, 116);
+            statusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             statusLabel.Name = "statusLabel";
-            statusLabel.Size = new System.Drawing.Size(40, 13);
+            statusLabel.Size = new System.Drawing.Size(47, 16);
             statusLabel.TabIndex = 5;
             statusLabel.Text = "Status:";
             // 
             // technical_requirements_idLabel
             // 
             technical_requirements_idLabel.AutoSize = true;
-            technical_requirements_idLabel.Location = new System.Drawing.Point(10, 121);
+            technical_requirements_idLabel.Location = new System.Drawing.Point(13, 149);
+            technical_requirements_idLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             technical_requirements_idLabel.Name = "technical_requirements_idLabel";
-            technical_requirements_idLabel.Size = new System.Drawing.Size(127, 13);
+            technical_requirements_idLabel.Size = new System.Drawing.Size(158, 16);
             technical_requirements_idLabel.TabIndex = 7;
             technical_requirements_idLabel.Text = "technical requirements id:";
             // 
             // company_idLabel
             // 
             company_idLabel.AutoSize = true;
-            company_idLabel.Location = new System.Drawing.Point(10, 147);
+            company_idLabel.Location = new System.Drawing.Point(13, 181);
+            company_idLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             company_idLabel.Name = "company_idLabel";
-            company_idLabel.Size = new System.Drawing.Size(64, 13);
+            company_idLabel.Size = new System.Drawing.Size(80, 16);
             company_idLabel.TabIndex = 9;
             company_idLabel.Text = "company id:";
             // 
@@ -135,11 +137,22 @@
             // 
             costLabel.AutoSize = true;
             costLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            costLabel.Location = new System.Drawing.Point(11, 185);
+            costLabel.Location = new System.Drawing.Point(15, 228);
+            costLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             costLabel.Name = "costLabel";
-            costLabel.Size = new System.Drawing.Size(40, 16);
+            costLabel.Size = new System.Drawing.Size(51, 20);
             costLabel.TabIndex = 11;
             costLabel.Text = "cost:";
+            // 
+            // prototype_infoLabel
+            // 
+            prototype_infoLabel.AutoSize = true;
+            prototype_infoLabel.Location = new System.Drawing.Point(484, 50);
+            prototype_infoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            prototype_infoLabel.Name = "prototype_infoLabel";
+            prototype_infoLabel.Size = new System.Drawing.Size(91, 16);
+            prototype_infoLabel.TabIndex = 14;
+            prototype_infoLabel.Text = "prototype info:";
             // 
             // programmnoeObespechenieDataset
             // 
@@ -164,7 +177,8 @@
             this.tableAdapterManager.PrototypeTableAdapter = this.prototypeTableAdapter;
             this.tableAdapterManager.TeamTableAdapter = null;
             this.tableAdapterManager.Technical_requirementsTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = бсбд.ProgrammnoeObespechenieDatasetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = бсбд.programmnoeObespechenieDatasetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usersTableAdapter = null;
             // 
             // prototypeBindingNavigator
             // 
@@ -172,6 +186,7 @@
             this.prototypeBindingNavigator.BindingSource = this.prototypeBindingSource;
             this.prototypeBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.prototypeBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.prototypeBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.prototypeBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -192,7 +207,7 @@
             this.prototypeBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.prototypeBindingNavigator.Name = "prototypeBindingNavigator";
             this.prototypeBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.prototypeBindingNavigator.Size = new System.Drawing.Size(1208, 25);
+            this.prototypeBindingNavigator.Size = new System.Drawing.Size(1611, 27);
             this.prototypeBindingNavigator.TabIndex = 0;
             this.prototypeBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -202,13 +217,14 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Добавить";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(55, 24);
             this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
@@ -218,7 +234,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
@@ -227,7 +243,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
             // 
             // bindingNavigatorMovePreviousItem
@@ -236,13 +252,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -250,14 +266,14 @@
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(65, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -265,7 +281,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -274,37 +290,39 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // prototypeBindingNavigatorSaveItem
             // 
             this.prototypeBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.prototypeBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("prototypeBindingNavigatorSaveItem.Image")));
             this.prototypeBindingNavigatorSaveItem.Name = "prototypeBindingNavigatorSaveItem";
-            this.prototypeBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.prototypeBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
             this.prototypeBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.prototypeBindingNavigatorSaveItem.Click += new System.EventHandler(this.prototypeBindingNavigatorSaveItem_Click);
             // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prototypeBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(143, 39);
+            this.idTextBox.Location = new System.Drawing.Point(191, 48);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(121, 20);
+            this.idTextBox.Size = new System.Drawing.Size(160, 22);
             this.idTextBox.TabIndex = 2;
             // 
             // versionTextBox
             // 
             this.versionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prototypeBindingSource, "Version", true));
-            this.versionTextBox.Location = new System.Drawing.Point(143, 65);
+            this.versionTextBox.Location = new System.Drawing.Point(191, 80);
+            this.versionTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.versionTextBox.Name = "versionTextBox";
-            this.versionTextBox.Size = new System.Drawing.Size(121, 20);
+            this.versionTextBox.Size = new System.Drawing.Size(160, 22);
             this.versionTextBox.TabIndex = 4;
             // 
             // statusComboBox
@@ -319,34 +337,38 @@
             "In progress",
             "Accepted",
             "Rejected"});
-            this.statusComboBox.Location = new System.Drawing.Point(143, 91);
+            this.statusComboBox.Location = new System.Drawing.Point(191, 112);
+            this.statusComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.statusComboBox.Name = "statusComboBox";
-            this.statusComboBox.Size = new System.Drawing.Size(121, 21);
+            this.statusComboBox.Size = new System.Drawing.Size(160, 24);
             this.statusComboBox.TabIndex = 6;
             // 
             // technical_requirements_idTextBox
             // 
             this.technical_requirements_idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prototypeBindingSource, "technical_requirements_id", true));
-            this.technical_requirements_idTextBox.Location = new System.Drawing.Point(143, 118);
+            this.technical_requirements_idTextBox.Location = new System.Drawing.Point(191, 145);
+            this.technical_requirements_idTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.technical_requirements_idTextBox.Name = "technical_requirements_idTextBox";
-            this.technical_requirements_idTextBox.Size = new System.Drawing.Size(121, 20);
+            this.technical_requirements_idTextBox.Size = new System.Drawing.Size(160, 22);
             this.technical_requirements_idTextBox.TabIndex = 8;
             // 
             // company_idTextBox
             // 
             this.company_idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prototypeBindingSource, "company_id", true));
-            this.company_idTextBox.Location = new System.Drawing.Point(143, 144);
+            this.company_idTextBox.Location = new System.Drawing.Point(191, 177);
+            this.company_idTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.company_idTextBox.Name = "company_idTextBox";
-            this.company_idTextBox.Size = new System.Drawing.Size(121, 20);
+            this.company_idTextBox.Size = new System.Drawing.Size(160, 22);
             this.company_idTextBox.TabIndex = 10;
             // 
             // costLabel1
             // 
             this.costLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prototypeBindingSource, "cost", true));
             this.costLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.costLabel1.Location = new System.Drawing.Point(57, 185);
+            this.costLabel1.Location = new System.Drawing.Point(76, 228);
+            this.costLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.costLabel1.Name = "costLabel1";
-            this.costLabel1.Size = new System.Drawing.Size(207, 23);
+            this.costLabel1.Size = new System.Drawing.Size(276, 28);
             this.costLabel1.TabIndex = 12;
             this.costLabel1.Text = "label1";
             // 
@@ -359,21 +381,13 @@
             // 
             this.technical_requirementsTableAdapter.ClearBeforeFill = true;
             // 
-            // prototype_infoLabel
-            // 
-            prototype_infoLabel.AutoSize = true;
-            prototype_infoLabel.Location = new System.Drawing.Point(363, 41);
-            prototype_infoLabel.Name = "prototype_infoLabel";
-            prototype_infoLabel.Size = new System.Drawing.Size(74, 13);
-            prototype_infoLabel.TabIndex = 14;
-            prototype_infoLabel.Text = "prototype info:";
-            // 
             // prototype_infoLabel1
             // 
             this.prototype_infoLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prototypeBindingSource, "prototype_info", true));
-            this.prototype_infoLabel1.Location = new System.Drawing.Point(443, 41);
+            this.prototype_infoLabel1.Location = new System.Drawing.Point(591, 50);
+            this.prototype_infoLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.prototype_infoLabel1.Name = "prototype_infoLabel1";
-            this.prototype_infoLabel1.Size = new System.Drawing.Size(297, 23);
+            this.prototype_infoLabel1.Size = new System.Drawing.Size(396, 28);
             this.prototype_infoLabel1.TabIndex = 15;
             this.prototype_infoLabel1.Text = "label1";
             // 
@@ -385,66 +399,53 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7});
+            this.dataGridViewTextBoxColumn4});
             this.prototypeDataGridView.DataSource = this.prototypeBindingSource;
-            this.prototypeDataGridView.Location = new System.Drawing.Point(12, 252);
+            this.prototypeDataGridView.Location = new System.Drawing.Point(16, 310);
+            this.prototypeDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.prototypeDataGridView.Name = "prototypeDataGridView";
-            this.prototypeDataGridView.Size = new System.Drawing.Size(1184, 220);
+            this.prototypeDataGridView.RowHeadersWidth = 51;
+            this.prototypeDataGridView.Size = new System.Drawing.Size(1579, 271);
             this.prototypeDataGridView.TabIndex = 15;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
             this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Version";
             this.dataGridViewTextBoxColumn2.HeaderText = "Version";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Status";
             this.dataGridViewTextBoxColumn3.HeaderText = "Status";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "technical_requirements_id";
             this.dataGridViewTextBoxColumn4.HeaderText = "technical_requirements_id";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "company_id";
-            this.dataGridViewTextBoxColumn5.HeaderText = "company_id";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "cost";
-            this.dataGridViewTextBoxColumn6.HeaderText = "cost";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "prototype_info";
-            this.dataGridViewTextBoxColumn7.HeaderText = "prototype_info";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 125;
             // 
             // Prototypes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1208, 497);
+            this.ClientSize = new System.Drawing.Size(1611, 612);
             this.Controls.Add(this.prototypeDataGridView);
             this.Controls.Add(prototype_infoLabel);
             this.Controls.Add(this.prototype_infoLabel1);
@@ -461,6 +462,7 @@
             this.Controls.Add(company_idLabel);
             this.Controls.Add(this.company_idTextBox);
             this.Controls.Add(this.prototypeBindingNavigator);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "Prototypes";
             this.Text = "Прототипы";
@@ -479,10 +481,10 @@
 
         #endregion
 
-        private ProgrammnoeObespechenieDataset programmnoeObespechenieDataset;
+        private programmnoeObespechenieDataset programmnoeObespechenieDataset;
         private System.Windows.Forms.BindingSource prototypeBindingSource;
-        private ProgrammnoeObespechenieDatasetTableAdapters.PrototypeTableAdapter prototypeTableAdapter;
-        private ProgrammnoeObespechenieDatasetTableAdapters.TableAdapterManager tableAdapterManager;
+        private programmnoeObespechenieDatasetTableAdapters.PrototypeTableAdapter prototypeTableAdapter;
+        private programmnoeObespechenieDatasetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator prototypeBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -503,7 +505,7 @@
         private System.Windows.Forms.TextBox company_idTextBox;
         private System.Windows.Forms.Label costLabel1;
         private System.Windows.Forms.BindingSource technical_requirementsBindingSource;
-        private ProgrammnoeObespechenieDatasetTableAdapters.Technical_requirementsTableAdapter technical_requirementsTableAdapter;
+        private programmnoeObespechenieDatasetTableAdapters.Technical_requirementsTableAdapter technical_requirementsTableAdapter;
         private System.Windows.Forms.Label prototype_infoLabel1;
         private System.Windows.Forms.DataGridView prototypeDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;

@@ -12,23 +12,16 @@ namespace бсбд
 {
     public partial class Прототипы_View : Form
     {
-        private static Прототипы_View Прототипы_View_form;
-        public static Прототипы_View Прототипы_View_f
-        {
-            get
-            {
-                if (Прототипы_View_form == null || Прототипы_View_form.IsDisposed) Прототипы_View_form = new Прототипы_View();
-                return Прототипы_View_form;
-            }
-        }
+        private readonly checkuser _user;
         public void ShowForm()
         {
             Show();
             Activate();
         }
-        public Прототипы_View()
+        public Прототипы_View(checkuser user)
         {
             InitializeComponent();
+            _user = user;
         }
 
         private void prototypeBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -42,7 +35,7 @@ namespace бсбд
         private void Прототипы_View_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "programmnoeObespechenieDataset.Prototype". При необходимости она может быть перемещена или удалена.
-            this.prototypeTableAdapter.Fill(this.programmnoeObespechenieDataset.Prototype);
+            this.prototypeTableAdapter.FillByCUST_ID(this.programmnoeObespechenieDataset.Prototype, _user.id_user);
 
         }
     }

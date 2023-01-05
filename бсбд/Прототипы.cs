@@ -12,18 +12,11 @@ namespace бсбд
 {
     public partial class Prototypes : Form
     {
-        private static Prototypes Prototypes_form;
-        public static Prototypes Prototypes_f
-        {
-            get
-            {
-                if (Prototypes_form == null || Prototypes_form.IsDisposed) Prototypes_form = new Prototypes();
-                return Prototypes_form;
-            }
-        }
-        public Prototypes()
+        private readonly checkuser _user;
+        public Prototypes(checkuser user)
         {
             InitializeComponent();
+            _user = user;
         }
 
         private void prototypeBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -33,13 +26,22 @@ namespace бсбд
             this.tableAdapterManager.UpdateAll(this.programmnoeObespechenieDataset);
 
         }
-
+        public void ShowForm()
+        {
+            Show();
+            Activate();
+        }
         private void Prototypes_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "programmnoeObespechenieDataset.Technical_requirements". При необходимости она может быть перемещена или удалена.
             this.technical_requirementsTableAdapter.Fill(this.programmnoeObespechenieDataset.Technical_requirements);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "programmnoeObespechenieDataset.Prototype". При необходимости она может быть перемещена или удалена.
-            this.prototypeTableAdapter.Fill(this.programmnoeObespechenieDataset.Prototype);
+            this.prototypeTableAdapter.FillByCUST_ID(this.programmnoeObespechenieDataset.Prototype, _user.id_user);
+
+        }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
 
         }
     }

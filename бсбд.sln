@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "бсбд", "бсбд\бсбд.csproj", "{F19B7742-DC53-488E-ADC6-705219D6A669}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "БСБД_SETUP", "БСБД_SETUP\БСБД_SETUP.vdproj", "{C709A539-5B02-49E1-8C2F-C9BF9BFFAD4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{F19B7742-DC53-488E-ADC6-705219D6A669}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F19B7742-DC53-488E-ADC6-705219D6A669}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F19B7742-DC53-488E-ADC6-705219D6A669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C709A539-5B02-49E1-8C2F-C9BF9BFFAD4A}.Debug|Any CPU.ActiveCfg = Debug
+		{C709A539-5B02-49E1-8C2F-C9BF9BFFAD4A}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -222,5 +222,10 @@ namespace бсбд
                     dataGridViewChangingdata.DataSource = FillDataGridView("select * FROM Developer");
             }
         }
+
+        private void groupBoxSelect_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

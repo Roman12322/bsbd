@@ -53,9 +53,9 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.technical_requirementsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.programmnoeObespechenieDataset = new бсбд.ProgrammnoeObespechenieDataset();
-            this.technical_requirementsTableAdapter = new бсбд.ProgrammnoeObespechenieDatasetTableAdapters.Technical_requirementsTableAdapter();
-            this.tableAdapterManager = new бсбд.ProgrammnoeObespechenieDatasetTableAdapters.TableAdapterManager();
+            this.programmnoeObespechenieDataset = new бсбд.programmnoeObespechenieDataset();
+            this.technical_requirementsTableAdapter = new бсбд.programmnoeObespechenieDatasetTableAdapters.Technical_requirementsTableAdapter();
+            this.tableAdapterManager = new бсбд.programmnoeObespechenieDatasetTableAdapters.TableAdapterManager();
             this.final_cost_with_tax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.technical_requirementsBindingNavigator)).BeginInit();
             this.technical_requirementsBindingNavigator.SuspendLayout();
@@ -283,7 +283,7 @@
             this.tableAdapterManager.PrototypeTableAdapter = null;
             this.tableAdapterManager.TeamTableAdapter = null;
             this.tableAdapterManager.Technical_requirementsTableAdapter = this.technical_requirementsTableAdapter;
-            this.tableAdapterManager.UpdateOrder = бсбд.ProgrammnoeObespechenieDatasetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = бсбд.programmnoeObespechenieDatasetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // final_cost_with_tax
             // 
@@ -315,10 +315,10 @@
 
         #endregion
 
-        private ProgrammnoeObespechenieDataset programmnoeObespechenieDataset;
+        private programmnoeObespechenieDataset programmnoeObespechenieDataset;
         private System.Windows.Forms.BindingSource technical_requirementsBindingSource;
-        private ProgrammnoeObespechenieDatasetTableAdapters.Technical_requirementsTableAdapter technical_requirementsTableAdapter;
-        private ProgrammnoeObespechenieDatasetTableAdapters.TableAdapterManager tableAdapterManager;
+        private programmnoeObespechenieDatasetTableAdapters.Technical_requirementsTableAdapter technical_requirementsTableAdapter;
+        private programmnoeObespechenieDatasetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator technical_requirementsBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;

@@ -12,23 +12,16 @@ namespace бсбд
 {
     public partial class команды_view : Form
     {
-        private static команды_view команды_view_form;
-        public static команды_view команды_view_f
-        {
-            get
-            {
-                if (команды_view_form == null || команды_view_form.IsDisposed) команды_view_form = new команды_view();
-                return команды_view_form;
-            }
-        }
+        private readonly checkuser _user;
         public void ShowForm()
         {
             Show();
             Activate();
         }
-        public команды_view()
+        public команды_view(checkuser user)
         {
             InitializeComponent();
+            _user = user;
         }
 
         private void teamBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -42,7 +35,12 @@ namespace бсбд
         private void команды_view_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "programmnoeObespechenieDataset.Team". При необходимости она может быть перемещена или удалена.
-            this.teamTableAdapter.Fill(this.programmnoeObespechenieDataset.Team);
+            this.teamTableAdapter.FillByDEV_ID(this.programmnoeObespechenieDataset.Team, _user.id_user);
+
+        }
+
+        private void teamBindingNavigator_RefreshItems(object sender, EventArgs e)
+        {
 
         }
     }

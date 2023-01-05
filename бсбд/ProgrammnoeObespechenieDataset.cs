@@ -1,18 +1,15 @@
 ﻿namespace бсбд
 {
-}
-
-namespace бсбд
-{
 
 
-    public partial class ProgrammnoeObespechenieDataset
+    partial class programmnoeObespechenieDataset
     {
     }
 }
-namespace бсбд {
+
+namespace бсбд.programmnoeObespechenieDatasetTableAdapters {
     
     
-    public partial class ProgrammnoeObespechenieDataset {
+    public partial class Technical_requirementsTableAdapter {
     }
 }
