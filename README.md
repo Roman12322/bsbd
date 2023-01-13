@@ -5,6 +5,5 @@ LOGIN: roma
 PASSWORD: roma
 
 2. ДАННЫЕ ДЛЯ ПОКУПАТЕЛЯ
-
 LOGIN: sofia
 PASSWORD: sofia
